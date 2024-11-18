@@ -12,18 +12,23 @@ We assume that you need to have the following components in order to build and l
 ## Project Structure
 .  
 ├── app/  
-│   ├── __init__.py        # Initializes the Flask application  
+│   ├── \_\_init\_\_.py    # Initializes the Flask application  
 │   ├── routes.py          # Defines the API routes  
-│   ├── utils.py           # Defines the utils methods  
 │   ├── services.py        # Contains the logic for calculating power distribution  
-├── run.py                 # Entry point for running the Flask application  
-├── requirements.txt       # Lists the project dependencies  
-├── Dockerfile             # Dockerfile for building the Docker image  
+│   ├── utils.py           # Defines the utils methods  
+├── tests/  
+│   ├── \_\_init\_\_.py    # Initializes the unit tests module  
+│   ├── test_routes.py     # Tests the API routes  
+│   ├── test_services.py   # Tests the logic for calculating power distribution  
+├── .gitignore             # Defines patterns to be ignored in the github repository  
+├── config.py              # Defines the Flask application configuration  
 ├── docker-compose.yml     # Docker Compose file for setting up the services  
+├── Dockerfile             # Dockerfile for building the Docker image  
 └── README.md              # Documentation for the project  
+├── requirements.txt       # Lists the project dependencies  
+├── run.py                 # Entry point for running the Flask application  
 
 ## Setup and Installation
-### Using Docker
 
 1. **Build the Docker image:**
 
@@ -83,3 +88,7 @@ For unit tests executions, please run the following command:
 ```bash
 docker-compose run test
 ```
+
+## Author
+
+* **Guilherme Cardoso Fernandes** - [GitHub Profile](https://github.com/guicfernandes)
